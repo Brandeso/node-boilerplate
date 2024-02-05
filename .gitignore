@@ -1,9 +1,14 @@
+# Node Packages
 node_modules/
 
+# Built and compiled version
 build
 
+# Code Editors Configurations
 .vscode
-
 .idea
 
 coverage
+
+# Package lock
+package-lock.json

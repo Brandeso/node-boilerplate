@@ -1,0 +1,19 @@
+{
+  "name": "simple-server",
+  "version": "0.0.1",
+  "description": "Simple Node express server to use as a shell",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brandeso/node-boilerplate"
+  },
+  "author": "Bruno Amezcua <amezcua_bruno@hotmail.com> (https://www.github.com/brandeso)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Brandeso/node-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Brandeso/node-boilerplate#readme"
+}

@@ -19,17 +19,17 @@
         "@typescript-eslint"
     ],
     "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["warn"],
+      "max-len": ["warn", {
+          "code": 120,
+          "ignoreUrls": true,
+          "ignoreComments": true,
+          "ignoreRegExpLiterals": true
+      }]
     },
     "ignorePatterns": [
         "build",
         "node_modules"
-    ],
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["warn"],
-    "max-len": ["warn", {
-        "code": 120,
-        "ignoreUrls": true,
-        "ignoreComments": true,
-        "ignoreRegExpLiterals": true
-    }]
+    ]
 }

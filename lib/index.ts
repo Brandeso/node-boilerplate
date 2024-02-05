@@ -1,1 +1,1 @@
-console.log("Hello boilerplate\'s Typescript World!");
+console.log("Hello boilerplate's Typescript World!");

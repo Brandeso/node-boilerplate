@@ -15,7 +15,11 @@
     "prepare": "npm run build",
     "prestart": "npm run build",
     "start": "node build/index.js",
-    "build": "npm run lint && npm test && tsc"
+    "build": "npm run lint && npm test && tsc",
+    "docs:generate": "auto-changelog -p; rm docs -r -fo && typedoc lib/ --plugin typedoc-plugin-markdown --out docs && git add CHANGELOG.md",
+    "docs:update": "npm run docs:generate && git commit -m \"📝 update docs\"",
+    "docs:generate:html": "auto-changelog -p; rm docs-html -r -fo && typedoc lib/ --plugin none --out docs-html && git add CHANGELOG.md",
+    "docs:update:html": "npm run docs:generate:htaml && git commit -m \"📝 update docs\""
   },
   "repository": {
     "type": "git",
@@ -35,10 +39,16 @@
     "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
+    "auto-changelog": "^2.4.0",
     "eslint": "^8.56.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
     "typedoc": "^0.25.7",
     "typedoc-plugin-markdown": "^3.17.1"
+  },
+  "auto-changelog": {
+    "commitLimit": false,
+    "unreleased": true,
+    "sortCommits": "date-desc"
   }
 }

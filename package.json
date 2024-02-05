@@ -16,10 +16,10 @@
     "prestart": "npm run build",
     "start": "node build/index.js",
     "build": "npm run lint && npm test && tsc",
-    "docs:generate": "auto-changelog -p; rm docs -r -fo && typedoc lib/ --plugin typedoc-plugin-markdown --out docs && git add CHANGELOG.md",
+    "docs:generate": "auto-changelog -p && rm docs -r -fo && typedoc lib/ --plugin typedoc-plugin-markdown --out docs && git add CHANGELOG.md",
     "docs:update": "npm run docs:generate && git commit -m \"📝 update docs\"",
-    "docs:generate:html": "auto-changelog -p; rm docs-html -r -fo && typedoc lib/ --plugin none --out docs-html && git add CHANGELOG.md",
-    "docs:update:html": "npm run docs:generate:htaml && git commit -m \"📝 update docs\""
+    "docs:generate:html": "auto-changelog -p && rm docs-html -r -fo && typedoc lib/ --plugin none --out docs-html && git add CHANGELOG.md",
+    "docs:update:html": "npm run docs:generate:html && git commit -m \"📝 update docs\""
   },
   "repository": {
     "type": "git",
